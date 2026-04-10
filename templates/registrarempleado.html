@@ -1,0 +1,47 @@
+<div class="modal fade" id="modalEmpleado">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- HEADER -->
+            <div class="modal-header">
+                <h4 class="modal-title">Registrar Empleado</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body">
+
+                <form method="POST" action="/registrar_empleado">
+
+                    <input type="number" name="documento" class="form-control mb-2" placeholder="Documento" required>
+
+                    <input type="text" name="nombre" class="form-control mb-2" placeholder="Nombre" required>
+
+                    <input type="text" name="apellido" class="form-control mb-2" placeholder="Apellido" required>
+
+                    <input type="text" name="cargo" class="form-control mb-2" placeholder="Cargo" required>
+
+                    <input type="number" step="0.01" name="salario" class="form-control mb-2" placeholder="Salario" required>
+
+                    <input type="number" name="horas_extras" class="form-control mb-2" placeholder="Horas extras" required>
+
+                    <input type="number" step="0.01" name="bonificacion" class="form-control mb-2" placeholder="Bonificación" required>
+
+                    <select name="id_area" class="form-control mb-2" required>
+                    <option value="">Seleccione un área</option>
+
+                    {% for area in areas %}
+                    <option value="{{ area[0] }}">{{ area[1] }}</option>
+                    {% endfor %}
+
+                    </select>
+
+                    <button class="btn btn-primary w-100">Registrar</button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

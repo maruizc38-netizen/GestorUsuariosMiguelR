@@ -1,0 +1,34 @@
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Registrar Usuario</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <form method="POST" action="/registrar">
+
+                    <input type="text" name="usuario" class="form-control mb-2" placeholder="Usuario" required>
+
+                    <input type="password" name="password" class="form-control mb-2" placeholder="Contraseña" required>
+
+                    <select name="rol" class="form-control mb-2" required>
+                        <option value="">Seleccione rol</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="empleado">Empleado</option>
+                    </select>
+
+                    <input type="number" name="documento" class="form-control mb-3" placeholder="Documento" required>
+
+                    <button class="btn btn-success w-100">Registrar</button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
